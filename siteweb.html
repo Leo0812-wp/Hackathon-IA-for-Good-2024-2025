@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA VERTE, PLANÈTE PRÉSERVÉE - Campagne écologique</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-tech-blue: #0a4d68;
+            --color-tech-light: #088395;
+            --color-nature-green: #05bfdb;
+            --color-nature-light: #00ffca;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .cover-gradient {
+            background: linear-gradient(135deg, var(--color-tech-blue) 0%, var(--color-tech-light) 40%, var(--color-nature-green) 80%, var(--color-nature-light) 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            color: var(--color-tech-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, var(--color-tech-blue), var(--color-nature-green));
+        }
+        
+        .table-of-contents a {
+            color: var(--color-tech-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .table-of-contents a:hover {
+            color: var(--color-nature-green);
+            padding-left: 5px;
+        }
+        
+        .visual-placeholder {
+            background: linear-gradient(135deg, rgba(10, 77, 104, 0.1) 0%, rgba(8, 131, 149, 0.1) 40%, rgba(5, 191, 219, 0.1) 80%, rgba(0, 255, 202, 0.1) 100%);
+            border: 2px dashed var(--color-tech-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-tech-blue);
+            font-weight: 500;
+            margin: 25px 0;
+            padding: 40px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--color-tech-blue);
+            color: var(--color-tech-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--color-tech-blue);
+            color: white;
+        }
+        
+        .infobox {
+            background-color: rgba(5, 191, 219, 0.1);
+            border-left: 4px solid var(--color-tech-light);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .page-break-avoid {
+            page-break-inside: avoid;
+        }
+        
+        /* Print specific styles */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            
+            .visual-placeholder {
+                height: 300px !important;
+                break-inside: avoid;
+            }
+            
+            h1, h2, h3, h4 {
+                break-after: avoid;
+            }
+            
+            a {
+                text-decoration: none;
+                color: var(--color-tech-blue);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Cover Page -->
+    <header class="cover-gradient text-white min-h-screen flex flex-col justify-center items-center text-center p-8">
+        <div class="max-w-4xl mx-auto">
+            <p class="uppercase tracking-widest mb-4 text-lg">Hackathon IA for Good 2024-2025</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8">IA VERTE, PLANÈTE PRÉSERVÉE</h1>
+            <p class="text-xl md:text-2xl mb-12">Campagne de sensibilisation sur l'impact écologique des technologies d'IA</p>
+            <div class="h-1 w-48 bg-white opacity-50 mx-auto mb-12"></div>
+            <p class="text-lg italic">"L'innovation au service de l'écologie"</p>
+        </div>
+    </header>
+
+    <main class="container max-w-4xl mx-auto p-8">
+        <!-- Table of Contents -->
+        <section id="sommaire" class="my-16">
+            <h2 class="section-title text-3xl">Sommaire</h2>
+            <div class="table-of-contents pl-4 mt-8">
+                <ol class="list-decimal space-y-3">
+                    <li><a href="#introduction" class="hover:text-nature-green">Introduction</a></li>
+                    <li><a href="#thematique" class="hover:text-nature-green">Thématique et message clé</a></li>
+                    <li><a href="#public-cible" class="hover:text-nature-green">Public cible</a></li>
+                    <li><a href="#strategie" class="hover:text-nature-green">Stratégie créative</a>
+                        <ul class="list-disc pl-8 mt-2 space-y-1">
+                            <li><a href="#identite" class="hover:text-nature-green">Identité visuelle</a></li>
+                            <li><a href="#ton" class="hover:text-nature-green">Ton et style</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#supports" class="hover:text-nature-green">Supports de communication</a>
+                        <ul class="list-disc pl-8 mt-2 space-y-1">
+                            <li><a href="#affiche" class="hover:text-nature-green">Affiche principale</a></li>
+                            <li><a href="#reseaux" class="hover:text-nature-green">Publications pour réseaux sociaux</a></li>
+                            <li><a href="#minijeu" class="hover:text-nature-green">Mini-jeu interactif</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#plan-diffusion" class="hover:text-nature-green">Plan de diffusion</a></li>
+                    <li><a href="#mesure-impact" class="hover:text-nature-green">Mesure d'impact</a></li>
+                    <li><a href="#reflexivite" class="hover:text-nature-green">Réflexivité du projet</a></li>
+                    <li><a href="#annexes" class="hover:text-nature-green">Annexes: Prompts IA</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="introduction" class="my-16">
+            <h2 class="section-title text-3xl">Introduction</h2>
+            <p class="mb-4">
+                Le Hackathon IA for Good 2024-2025 nous invite à mettre l'innovation au service de l'écologie en créant une campagne de sensibilisation en utilisant différentes technologies d'intelligence artificielle. Ce document présente notre projet complet, de la conception à la réalisation, en détaillant notre approche, nos choix stratégiques et les outils IA utilisés.
+            </p>
+            <p class="mb-4">
+                Notre mission est double: sensibiliser efficacement à une problématique écologique spécifique tout en démontrant le potentiel des outils d'IA pour créer des contenus engageants et percutants dans un délai contraint de 6 heures.
+            </p>
+            
+            <div class="h-64">
+                <img src="https://i.postimg.cc/ZC5cM0Jp/Chat-GPT-Image-18-avr-2025-11-50-52.png" alt="Bannière d'introduction de la campagne" class="w-full h-full object-cover">
+            </div>
+            
+        </section>
+
+        <!-- Thématique et message clé -->
+        <section id="thematique" class="my-16">
+            <h2 class="section-title text-3xl">Thématique et message clé</h2>
+            
+            <h3 class="font-semibold text-2xl text-tech-blue mb-4">Thématique choisie: La réduction de l'impact énergétique des IA</h3>
+            <p class="mb-4">
+                Nous avons choisi de concentrer notre campagne sur un sujet qui fait le lien direct entre technologie et écologie: l'empreinte carbone des intelligences artificielles. Ce choix est particulièrement pertinent car:
+            </p>
+            <ol class="list-decimal pl-8 mb-6 space-y-2">
+                <li>Il s'aligne avec le thème même du hackathon (IA for Good)</li>
+                <li>Il aborde une problématique émergente mais cruciale</li>
+                <li>Il cible un public sensibilisé à la technologie mais pas nécessairement conscient de son impact écologique</li>
+                <li>Il permet de montrer que l'innovation peut à la fois être le problème et la solution</li>
+            </ol>
+            
+            <h3 class="font-semibold text-2xl text-tech-blue mb-4">Message clé: "IA verte, planète préservée"</h3>
+            <p class="mb-6">
+                Notre slogan principal vise à établir un lien direct entre nos choix technologiques et leur impact environnemental. Le message sous-jacent est que nous pouvons continuer à bénéficier des avancées de l'IA tout en adoptant une approche responsable et durable.
+            </p>
+            
+            <h3 class="font-semibold text-2xl text-tech-blue mb-4">Call-to-Action (CTA): "Optimisez l'empreinte de vos technologies!"</h3>
+            
+            <div class="visual-placeholder h-96">
+                <i class="fas fa-chart-pie text-3xl mb-4"></i>
+                <p>EMPLACEMENT VISUEL 2: Infographie illustrant l'empreinte carbone des IA</p>
+            </div>
+        </section>
+
+        <!-- Public cible -->
+        <section id="public-cible" class="my-16">
+            <h2 class="section-title text-3xl">Public cible</h2>
+            <p class="mb-6">
+                Notre campagne s'adresse principalement à trois segments:
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">Professionnels du numérique</h3>
+                    <p>Développeurs, data scientists, entreprises tech, startups IA</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">Étudiants en informatique</h3>
+                    <p>Future génération de professionnels du numérique</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">Utilisateurs d'IA</h3>
+                    <p>Grand public utilisant ChatGPT, Midjourney, et autres services d'IA</p>
+                </div>
+            </div>
+            
+            <p class="mb-6">
+                Ces publics ont été choisis car ils représentent à la fois les créateurs et les consommateurs des technologies d'IA, et donc les principaux acteurs pouvant influencer l'empreinte écologique de ces technologies.
+            </p>
+            
+            <div class="visual-placeholder h-80">
+                <i class="fas fa-users text-3xl mb-4"></i>
+                <p>EMPLACEMENT VISUEL 3: Personas représentant les trois segments du public cible</p>
+            </div>
+        </section>
+
+        <!-- Stratégie créative -->
+        <section id="strategie" class="my-16">
+            <h2 class="section-title text-3xl">Stratégie créative</h2>
+            
+            <div id="identite" class="mb-12">
+                <h3 class="font-semibold text-2xl text-tech-blue mb-4">Identité visuelle</h3>
+                <p class="mb-4">
+                    Notre identité visuelle joue sur le contraste entre technologie et nature, avec:
+                </p>
+                <ul class="list-disc pl-8 mb-6 space-y-2">
+                    <li>Une <strong>palette de couleurs</strong> associant des tons technologiques (bleu électrique, violet) et des teintes naturelles (vert, bleu ciel)</li>
+                    <li>Des <strong>visuels</strong> mixant éléments naturels (arbres, feuilles, eau) et technologiques (circuits, code, data centers)</li>
+                    <li>Une <strong>typographie</strong> moderne et minimaliste pour la lisibilité et l'aspect tech</li>
+                </ul>
+            </div>
+            
+            <div id="ton" class="mb-6">
+                <h3 class="font-semibold text-2xl text-tech-blue mb-4">Ton et style</h3>
+                <p class="mb-4">
+                    Nous avons opté pour un ton:
+                </p>
+                <ul class="list-disc pl-8 mb-6 space-y-2">
+                    <li>Informatif mais accessible</li>
+                    <li>Factuel sans être culpabilisant</li>
+                    <li>Orienté solutions plutôt que problèmes</li>
+                    <li>Inspirant et mobilisateur</li>
+                </ul>
+            </div>
+            
+            <div class="visual-placeholder h-80">
+                <i class="fas fa-palette text-3xl mb-4"></i>
+                <p>EMPLACEMENT VISUEL 4: Moodboard de l'identité visuelle</p>
+            </div>
+        </section>
+
+        <!-- Supports de communication -->
+        <section id="supports" class="my-16">
+            <h2 class="section-title text-3xl">Supports de communication</h2>
+            
+            <div id="affiche" class="mb-12">
+                <h3 class="font-semibold text-2xl text-tech-blue mb-4">Affiche principale</h3>
+                <p class="mb-6">
+                    Notre affiche principale constitue le support visuel central de la campagne. Elle illustre de manière frappante l'impact énergétique des IA tout en proposant une vision positive des solutions.
+                </p>
+                
+                <div class="visual-placeholder h-[500px]">
+                    <i class="fas fa-file-image text-3xl mb-4"></i>
+                    <p>EMPLACEMENT VISUEL 5: Affiche principale de la campagne</p>
+                </div>
+            </div>
+            
+            <div id="reseaux" class="mb-12">
+                <h3 class="font-semibold text-2xl text-tech-blue mb-4">Publications pour réseaux sociaux</h3>
+                <p class="mb-6">
+                    Nous avons conçu une série de 3 publications pour Instagram et LinkedIn, adaptées aux formats et aux usages de ces plateformes:
+                </p>
+                
+                <div class="mb-8">
+                    <h4 class="font-semibold text-xl mb-3">Publication 1: Le saviez-vous?</h4>
+                    <p class="mb-4">Infographie choc sur la consommation énergétique des modèles d'IA</p>
+                    
+                    <div class="visual-placeholder h-80">
+                        <i class="fas fa-mobile-alt text-3xl mb-4"></i>
+                        <p>EMPLACEMENT VISUEL 6: Mockup de la publication Instagram #1</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="font-semibold text-xl mb-3">Publication 2: Astuces pratiques</h4>
+                    <p class="mb-4">Série de 3 conseils pour réduire l'empreinte de son usage personnel de l'IA</p>
+                    
+                    <div class="visual-placeholder h-80">
+                        <i class="fas fa-mobile-alt text-3xl mb-4"></i>
+                        <p>EMPLACEMENT VISUEL 7: Mockup de la publication Instagram #2</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="font-semibold text-xl mb-3">Publication 3: Success story</h4>
+                    <p class="mb-4">Exemple d'une entreprise ayant optimisé l'empreinte carbone de ses IA</p>
+                    
+                    <div class="visual-placeholder h-80">
+                        <i class="fas fa-mobile-alt text-3xl mb-4"></i>
+                        <p>EMPLACEMENT VISUEL 8: Mockup de la publication Instagram #3</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="minijeu" class="mb-12">
+                <h3 class="font-semibold text-2xl text-tech-blue mb-4">Mini-jeu interactif: "IA-cologiste"</h3>
+                <p class="mb-4">
+                    Pour engager notre public de manière ludique, nous proposons un mini-jeu éducatif qui simule la gestion d'un data center d'IA avec des contraintes écologiques.
+                </p>
+                
+                <h4 class="font-semibold text-xl mb-3">Concept du jeu</h4>
+                <p class="mb-4">
+                    Le joueur doit gérer un data center en équilibrant performances des modèles d'IA et consommation énergétique. L'objectif est d'atteindre le meilleur rapport efficacité/impact écologique.
+                </p>
+                
+                <h4 class="font-semibold text-xl mb-3">Mécaniques de jeu</h4>
+                <ul class="list-disc pl-8 mb-6 space-y-2">
+                    <li>Choix de l'emplacement du data center (zones à énergies renouvelables)</li>
+                    <li>Optimisation des ressources de calcul</li>
+                    <li>Gestion de la température et du refroidissement</li>
+                    <li>Défis et récompenses liés à l'efficacité énergétique</li>
+                </ul>
+                
+                <div class="visual-placeholder h-96">
+                    <i class="fas fa-gamepad text-3xl mb-4"></i>
+                    <p>EMPLACEMENT VISUEL 9: Mockup des interfaces principales du mini-jeu</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan de diffusion -->
+        <section id="plan-diffusion" class="my-16">
+            <h2 class="section-title text-3xl">Plan de diffusion</h2>
+            <p class="mb-6">
+                Notre stratégie de diffusion s'articule autour de:
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">LinkedIn</h3>
+                    <p>Pour toucher les professionnels du secteur tech et IA</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">Instagram</h3>
+                    <p>Pour atteindre un public plus jeune et étudiant</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">Écoles d'ingénieurs et universités</h3>
+                    <p>Distribution d'affiches dans les départements informatiques</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">Événements tech</h3>
+                    <p>Présence sur les salons et conférences spécialisés en IA</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm md:col-span-2">
+                    <h3 class="font-semibold text-xl mb-3 text-tech-blue">Partenariats</h3>
+                    <p>Collaborations avec des acteurs du secteur tech engagés dans des démarches RSE</p>
+                </div>
+            </div>
+            
+            <div class="visual-placeholder h-80">
+                <i class="fas fa-share-alt text-3xl mb-4"></i>
+                <p>EMPLACEMENT VISUEL 10: Diagramme du plan de diffusion</p>
+            </div>
+        </section>
+
+        <!-- Mesure d'impact -->
+        <section id="mesure-impact" class="my-16">
+            <h2 class="section-title text-3xl">Mesure d'impact</h2>
+            <p class="mb-6">
+                Pour évaluer l'efficacité de notre campagne, nous mettrons en place les indicateurs suivants:
+            </p>
+            
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm mb-8">
+                <ul class="list-disc pl-8 space-y-3">
+                    <li><strong>Engagement sur les réseaux sociaux</strong>: Likes, partages, commentaires, portée</li>
+                    <li><strong>Utilisation du mini-jeu</strong>: Nombre d'utilisateurs, temps de jeu, taux de complétion</li>
+                    <li><strong>QR code sur les affiches</strong>: Tracking des scans pour mesurer l'intérêt</li>
+                    <li><strong>Quiz de connaissance</strong>: Avant/après pour mesurer l'évolution de la conscience du problème</li>
+                    <li><strong>Sondage d'intention</strong>: Mesure de la volonté d'action après exposition à la campagne</li>
+                </ul>
+            </div>
+            
+            <div class="visual-placeholder h-96">
+                <i class="fas fa-chart-line text-3xl mb-4"></i>
+                <p>EMPLACEMENT VISUEL 11: Dashboard de suivi des KPIs</p>
+            </div>
+        </section>
+
+        <!-- Réflexivité du projet -->
+        <section id="reflexivite" class="my-16">
+            <h2 class="section-title text-3xl">Réflexivité du projet</h2>
+            
+            <h3 class="font-semibold text-2xl text-tech-blue mb-4">Choix de la thématique</h3>
+            <p class="mb-6">
+                Nous avons choisi la réduction de l'impact énergétique des IA car ce sujet représente une belle ironie: utiliser l'IA pour sensibiliser à l'impact écologique de l'IA. Ce paradoxe nous a semblé puissant et pertinent, surtout dans le cadre d'un hackathon IA for Good.
+            </p>
+            
+            <h3 class="font-semibold text-2xl text-tech-blue mb-4">Choix des outils IA</h3>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li><strong>Midjourney</strong> (via Ideogram.ai) pour les visuels principaux: capacité à créer des visuels complexes mêlant nature et technologie</li>
+                <li><strong>ChatGPT</strong> pour les textes et le concept du mini-jeu: expertise en vulgarisation et création de contenus engageants</li>
+                <li><strong>Suno</strong> pour la musique du mini-jeu: capacité à créer des ambiances sonores adaptées au gameplay</li>
+                <li><strong>ElevenLabs</strong> pour les voix-off des vidéos explicatives: naturalité des voix générées</li>
+            </ul>
+            
+            <h3 class="font-semibold text-2xl text-tech-blue mb-4">Défis rencontrés</h3>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm mb-6">
+                <p class="font-semibold mb-2">1. Équilibre entre pédagogie et engagement</p>
+                <p>Comment aborder un sujet technique sans perdre l'attention</p>
+                
+                <div class="h-0.5 w-16 bg-gray-300 my-4"></div>
+                
+                <p class="font-semibold mb-2">2. Cohérence visuelle cross-supports</p>
+                <p>Maintenir une identité cohérente entre affiche, réseaux sociaux et mini-jeu</p>
+            </div>
+            
+            <h3 class="font-semibold text-2xl text-tech-blue mb-4">Bilan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h4 class="font-semibold text-lg mb-3 text-tech-blue">Points forts</h4>
+                    <p>Approche originale d'un sujet émergent, cohérence entre le fond et la forme</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h4 class="font-semibold text-lg mb-3 text-tech-blue">Axes d'amélioration</h4>
+                    <p>Davantage de données chiffrées, plus de personnalisation selon les segments cibles</p>
+                </div>
+            </div>
+            
+            <div class="visual-placeholder h-80">
+                <i class="fas fa-lightbulb text-3xl mb-4"></i>
+                <p>EMPLACEMENT VISUEL 12: Image conceptuelle représentant les défis du projet</p>
+            </div>
+        </section>
+        
+        <!-- Annexes: Prompts IA -->
+        <section id="annexes" class="my-16">
+            <h2 class="section-title text-3xl">Annexes: Prompts IA</h2>
+            <p class="mb-6">
+                Voici les prompts optimisés pour générer les visuels de notre campagne avec ChatGPT (via Ideogram.ai, DALL-E ou Midjourney):
+            </p>
+            
+            <div class="mb-8">
+                <h3 class="font-semibold text-xl mb-3">VISUEL 1: Bannière d'introduction de la campagne</h3>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                    Crée une bannière horizontale large (format 1200x400) illustrant le concept "IA verte, planète préservée".<br>
+                    La bannière doit montrer une fusion harmonieuse entre technologie IA et nature.<br>
+                    Style: Photoréaliste avec des éléments de design tech épuré.<br>
+                    À gauche: Un data center moderne dont les serveurs sont partiellement recouverts de plantes grimpantes et de mousse.<br>
+                    Au centre: Des lignes de code ou circuits lumineux de couleur verte qui se transforment progressivement en branches d'arbres et feuilles.<br>
+                    À droite: Une forêt luxuriante avec un ciel bleu.<br>
+                    Palette: Dégradé de bleu technologique à vert naturel.<br>
+                    Le titre "IA FOR GOOD" doit apparaître en haut de manière élégante.
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="font-semibold text-xl mb-3">VISUEL 2: Infographie sur l'empreinte carbone des IA</h3>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                    Crée une infographie moderne et claire sur l'empreinte carbone des modèles d'IA.<br>
+                    Style: Design plat avec des icônes épurées, fond blanc avec accents de couleur.<br>
+                    Contenu principal: Une comparaison visuelle montrant:<br>
+                    1. Un grand modèle de langage = équivalent en CO2 de X vols transatlantiques<br>
+                    2. L'entraînement d'un modèle de vision = consommation électrique d'une maison pendant Y années<br>
+                    3. Un data center d'IA = consommation d'eau d'une ville de Z habitants<br>
+                    Ajoute quelques points de données chiffrés sous forme de mini-graphiques.<br>
+                    En bas, une section "Solutions" avec 3 petites icônes représentant l'efficacité énergétique, l'optimisation des modèles, et l'utilisation d'énergies renouvelables.
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="font-semibold text-xl mb-3">VISUEL 3: Personas du public cible</h3>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                    Crée un visuel moderne présentant trois personas pour notre campagne sur l'IA écologique:<br>
+                    1. Une professionnelle tech/data scientist dans un environnement de bureau high-tech, 30-35 ans, habillée business casual, devant des écrans affichant du code ou des visualisations de données.<br>
+                    2. Un étudiant en informatique, 20-25 ans, dans un espace de co-working ou bibliothèque universitaire, avec un laptop, des livres et une tasse de café.<br>
+                    3. Un utilisateur grand public, 25-40 ans, utilisant un smartphone ou tablette dans un environnement domestique, avec une interface d'IA visible sur l'écran.<br>
+                    Style: Illustrations vectorielles modernes avec détails soignés mais épurés.<br>
+                    Arrière-plan: Subtil et minimaliste, mettant en valeur les personas.<br>
+                    Palette: Tons bleus et verts technologiques.
+                </div>
+            </div>
+            
+            <div class="accordion mb-6">
+                <div class="accordion-item">
+                    <button class="w-full bg-gray-100 hover:bg-gray-200 py-3 px-4 rounded-lg text-left font-semibold flex justify-between items-center" onclick="toggleAccordion(this)">
+                        <span>Voir plus de prompts IA</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content hidden mt-2 space-y-6">
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-xl mb-3">VISUEL 4: Moodboard de l'identité visuelle</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                                Crée un moodboard professionnel pour l'identité visuelle d'une campagne "IA verte, planète préservée".<br>
+                                Style: Grille de 9 images sur fond blanc ou gris très clair.<br>
+                                Contenu:<br>
+                                - Palette de couleurs: dégradés de bleu tech au vert nature<br>
+                                - Typographie: exemples de polices modernes sans-serif pour titres et textes<br>
+                                - Textures: circuits imprimés verts, feuillages, data visualization épurée<br>
+                                - Formes: hexagones, lignes ondulées, branches d'arbres stylisées<br>
+                                - Iconographie: puces CPU avec feuilles, data centers écologiques, graphiques éco-responsables<br>
+                                - Ambiance: high-tech mais naturelle, futuriste mais durable<br>
+                                L'ensemble doit être cohérent et sophistiqué, évoquant à la fois technologie de pointe et conscience environnementale.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-xl mb-3">VISUEL 5: Affiche principale</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                                Crée une affiche percutante au format portrait (ratio 2:3) pour une campagne sur l'IA écologique.<br>
+                                Élément central: Un serveur/data center dont la moitié est transformée en arbre luxuriant, avec des branches et racines qui remplacent progressivement les circuits et câbles.<br>
+                                Titre principal en haut: "IA VERTE, PLANÈTE PRÉSERVÉE" en typographie bold et moderne.<br>
+                                Sous-titre: "Optimisez l'empreinte de vos technologies"<br>
+                                En bas: Un QR code stylisé (suggestion visuelle) avec mention "Découvrez comment agir"<br>
+                                Style: Photoréaliste avec des touches de design épuré et futuriste.<br>
+                                Palette: Contrastes entre bleu électrique/violet (tech) et verts/bleus naturels.<br>
+                                L'affiche doit avoir un aspect professionnel, impactant et mémorable.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-xl mb-3">VISUELS 6, 7 et 8: Publications Instagram</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                                Crée un mockup de 3 publications Instagram pour une campagne sur l'IA écologique:<br><br>
+                                
+                                PUBLICATION 1 - "LE SAVIEZ-VOUS?"<br>
+                                Format: Carré avec design infographique<br>
+                                Élément principal: Une visualisation frappante montrant qu'un seul entraînement de grand modèle IA consomme autant d'énergie que X voitures pendant un an<br>
+                                Style: Graphique simple et impactant avec chiffres en grand<br>
+                                Palette: Tons orangés/rouges pour l'aspect alerte<br><br>
+                                
+                                PUBLICATION 2 - "3 ASTUCES ÉCO-IA"<br>
+                                Format: Carousel de 3 images carrées<br>
+                                Contenu: 3 cartes avec une astuce par carte:<br>
+                                1. "Utilisez des modèles pré-entraînés plutôt que d'en créer de nouveaux"<br>
+                                2. "Optez pour des modèles plus petits et spécialisés quand c'est possible"<br>
+                                3. "Choisissez des fournisseurs de services IA utilisant des énergies renouvelables"<br>
+                                Style: Icônes minimalistes, fond dégradé bleu-vert<br><br>
+                                
+                                PUBLICATION 3 - "SUCCESS STORY"<br>
+                                Format: Carré, style article/témoignage<br>
+                                Contenu: Mockup d'un cas d'entreprise ayant réduit de 40% l'empreinte carbone de ses services IA<br>
+                                Visuel: Photo corporate (suggestion) avec graphique de réduction d'empreinte<br>
+                                Style: Professionnel, inspiration LinkedIn
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-xl mb-3">VISUEL 9: Interfaces du mini-jeu</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                                Crée un mockup des interfaces principales d'un mini-jeu éducatif appelé "IA-cologiste" sur la gestion éco-responsable d'un data center.<br>
+                                Format: Composition horizontale montrant 3 écrans de jeu côte à côte:<br><br>
+                                
+                                ÉCRAN 1 - ACCUEIL/MENU:<br>
+                                Interface épurée avec logo "IA-cologiste", boutons "Jouer", "Tutoriel", "Classement"<br>
+                                Arrière-plan: Data center stylisé avec éléments naturels<br><br>
+                                
+                                ÉCRAN 2 - CHOIX DU SITE:<br>
+                                Interface de carte du monde simplifiée avec 3-4 emplacements disponibles<br>
+                                Indicateurs d'accès aux énergies renouvelables par région (solaire, éolien, hydraulique)<br>
+                                Interface de sélection avec stats par emplacement<br><br>
+                                
+                                ÉCRAN 3 - GAMEPLAY PRINCIPAL:<br>
+                                Grille représentant l'intérieur du data center<br>
+                                Éléments de jeu: serveurs, systèmes de refroidissement, panneaux solaires<br>
+                                Interface montrant scores: Performance IA vs Empreinte Carbone<br>
+                                Mini-dashboard avec indicateurs d'efficacité énergétique<br><br>
+                                
+                                Style: Interface de jeu moderne, légèrement stylisée avec palette bleue-verte<br>
+                                Ajoutez quelques éléments d'UI comme des barres de progression, compteurs d'énergie et monnaie virtuelle.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-xl mb-3">VISUEL 10: Plan de diffusion</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                                Crée une infographie professionnelle illustrant le plan de diffusion multicanal d'une campagne sur l'IA écologique.<br>
+                                Format: Diagramme de flux moderne sur fond blanc<br>
+                                Éléments à inclure:<br>
+                                - Au centre: logo/visuel de la campagne "IA verte"<br>
+                                - Branches vers 5 canaux principaux avec icônes:<br>
+                                  1. LinkedIn (professionnels tech)<br>
+                                  2. Instagram (étudiants)<br>
+                                  3. Écoles d'ingénieurs (affichage)<br>
+                                  4. Événements tech (stands)<br>
+                                  5. Partenariats (entreprises)<br>
+                                - Pour chaque canal: petit encadré avec 2-3 puces d'actions spécifiques<br>
+                                - Flèches de connexion montrant les interactions entre canaux<br>
+                                - Timeline simplifiée en bas (3 phases: lancement, déploiement, suivi)<br>
+                                Style: Design plat, épuré et business<br>
+                                Palette: Bleus professionnels avec touches de vert
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-xl mb-3">VISUEL 11: Dashboard KPIs</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                                Crée un mockup de dashboard analytics pour mesurer l'impact d'une campagne de sensibilisation sur l'IA écologique.<br>
+                                Format: Interface de tableau de bord moderne type SaaS/analytics<br>
+                                Sections principales:<br>
+                                1. En-tête avec titre "Impact Campaign Analytics" et période sélectionnée<br>
+                                2. Section KPIs avec compteurs/jauges pour:<br>
+                                   - Engagement total (likes, partages, commentaires)<br>
+                                   - Téléchargements du mini-jeu<br>
+                                   - Scans de QR code<br>
+                                   - Score de sensibilisation (basé sur quiz)<br>
+                                3. Graphique central montrant l'évolution de l'engagement sur 4 semaines<br>
+                                4. Répartition démographique du public touché (camembert ou barres)<br>
+                                5. Carte de chaleur des zones géographiques les plus engagées<br>
+                                Style: Interface épurée, professionnelle avec data visualization soignée<br>
+                                Palette: Fond blanc/gris très clair, éléments bleus et verts, accents orange pour points d'attention
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-xl mb-3">VISUEL 12: Défis du projet</h3>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm font-mono text-sm overflow-auto">
+                                Crée une illustration conceptuelle représentant les défis d'un projet de campagne sur l'IA écologique.<br>
+                                Concept: Métaphore visuelle où une équipe de 3-4 personnes diverses construit/assemble un pont entre deux falaises:<br>
+                                - À gauche: une falaise représentant la "technologie IA" avec des éléments tech (serveurs, code)<br>
+                                - À droite: une falaise représentant "l'écologie" avec des éléments naturels (arbres, eau claire)<br>
+                                - Au centre: l'équipe travaillant sur un pont en construction fait d'éléments mixtes tech/nature<br>
+                                Style: Illustration moderne avec profondeur et détails soignés<br>
+                                Perspective: Vue latérale légèrement plongeante montrant l'ampleur du défi<br>
+                                Palette: Contrastes entre tons tech/froids à gauche et tons naturels/chauds à droite<br>
+                                Ajoute quelques étiquettes subtiles identifiant les défis principaux: "Pédagogie vs Engagement", "Cohérence visuelle", "Data vs Storytelling"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container max-w-4xl mx-auto px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">IA VERTE, PLANÈTE PRÉSERVÉE</h3>
+                    <p class="mb-4">Une campagne créée dans le cadre du Hackathon IA for Good 2024-2025.</p>
+                    <p class="text-gray-400">"L'innovation au service de l'écologie"</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                    <p class="mb-2">
+                        <i class="fas fa-envelope mr-2"></i> contact@ia-verte.exemple
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-globe mr-2"></i> www.ia-verte.exemple
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 Hackathon IA for Good. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                content.style.display = "block";
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+    </script>
+</body>
+</html>
